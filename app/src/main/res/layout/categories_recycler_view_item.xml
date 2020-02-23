@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentCategoryLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/bottom_border">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/categoryIconImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/categoryNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/sixteen_sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:singleLine="true"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/categoryIconImageView"
+            android:layout_toLeftOf="@+id/expandCollapseRelativeLayout"
+            android:layout_centerVertical="true"/>
+
+        <RelativeLayout
+            android:id="@+id/expandCollapseRelativeLayout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/expandCollapseTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorLightBlack"
+                android:textSize="@dimen/twenty_sp"
+                android:text="@string/icon_angle_down"
+                android:layout_centerInParent="true"/>
+            
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/subCategoryGridView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:scrollbars="none"
+        android:visibility="gone"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:layout_marginBottom="20dp"/>
+    
+</LinearLayout>

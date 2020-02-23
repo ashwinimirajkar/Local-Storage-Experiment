@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLightBlack"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:layout_marginBottom="5dp">
+        
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoriesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+        
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/noNetworkRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/noNetworkImageView"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/no_internet_icon"
+            android:tint="@color/colorLightGray"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/noNetworkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_network_msg"
+            android:textColor="@color/color_silver"
+            android:textSize="@dimen/sixteen_sp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_below="@+id/noNetworkImageView"/>
+
+        <TextView
+            android:id="@+id/retryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/retry"
+            android:textColor="@color/colorLightBlack"
+            android:textSize="@dimen/sixteen_sp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/noNetworkTextView"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

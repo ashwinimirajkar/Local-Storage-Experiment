@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/titleRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLightBlack"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:id="@+id/backIconRelativeLayout"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:id="@+id/backIconTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/icon_chevron_left"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/twenty_sp"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/childCategoryNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sixteen_sp"
+            android:textStyle="bold"
+            android:layout_toLeftOf="@+id/sortIconRelativeLayout"
+            android:layout_toRightOf="@+id/backIconRelativeLayout"
+            android:layout_centerInParent="true"/>
+
+        <RelativeLayout
+            android:id="@+id/sortIconRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="left"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/sortTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sixteen_sp"
+                android:textStyle="bold"
+                android:text="@string/sort"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/sortIconTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/icon_sort_by_attributes"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sixteen_sp"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/sortTextView"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+        
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/productsGridView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:scrollbars="none"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/titleRelativeLayout"/>
+    
+</RelativeLayout>
